@@ -2,18 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Xamarin.Auth;
 using Xamarin.Forms;
 
 namespace SoloTravellerApp
 {
     public partial class App : Application
     {
+        public static Account Account;
+        public static AccountStore Store;
+
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage(new MainPage());
+            Store = AccountStore.Create();
+            Account = Store.FindAccountsForService(Constants.AppName).FirstOrDefault();
+            if (Account != null)
+                MainPage = new NavigationPage(new MainPage());
+            else
+                MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()
