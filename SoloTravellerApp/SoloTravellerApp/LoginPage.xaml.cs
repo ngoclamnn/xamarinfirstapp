@@ -63,7 +63,7 @@ namespace SoloTravellerApp
                     App.Store.Delete(App.Account, Constants.AppName);
                 }
                 await App.Store.SaveAsync(App.Account = e.Account, Constants.AppName);
-                await Navigation.PushAsync(new MainPage());
+                App.Current.MainPage = new SolotravellerMasterDetailPage();
             }
         }
         void OnAuthError(object sender, AuthenticatorErrorEventArgs e)

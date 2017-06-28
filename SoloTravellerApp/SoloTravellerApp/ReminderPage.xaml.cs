@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace SoloTravellerApp
 {
-    public partial class MainPage : MasterDetailPage
-
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ReminderPage : ContentPage
     {
-        public MainPage()
+        public ReminderPage()
         {
             InitializeComponent();
-        }
-
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new LoginPage());
         }
     }
 }

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace SoloTravellerApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SoloMasterDetail : MasterDetailPage
+    public partial class SolotravellerMasterDetailPage : MasterDetailPage
     {
-        public SoloMasterDetail()
+        public SolotravellerMasterDetailPage()
         {
             InitializeComponent();
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
@@ -20,10 +20,15 @@ namespace SoloTravellerApp
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = e.SelectedItem as SoloMasterDetailMenuItem;
+            var item = e.SelectedItem as SolotravellerMasterDetailPageMenuItem;
             if (item == null)
                 return;
-
+            if(item.TargetType == typeof(LogoutPage))
+            {
+                App.Store.Delete(App.Account, Constants.AppName);
+                App.Current.MainPage = new LoginPage();
+                return;
+            }
             var page = (Page)Activator.CreateInstance(item.TargetType);
             page.Title = item.Title;
 

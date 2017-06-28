@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace SoloTravellerApp
 {
 
-    public class SoloMasterDetailMenuItem
+    public class SolotravellerMasterDetailPageMenuItem
     {
-        public SoloMasterDetailMenuItem()
+        public SolotravellerMasterDetailPageMenuItem()
         {
-            TargetType = typeof(SoloMasterDetailDetail);
+            TargetType = typeof(SolotravellerMasterDetailPageDetail);
         }
         public int Id { get; set; }
         public string Title { get; set; }

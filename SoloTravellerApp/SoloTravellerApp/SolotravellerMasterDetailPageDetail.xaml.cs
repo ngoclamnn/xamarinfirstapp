@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace SoloTravellerApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SoloMasterDetailDetail : ContentPage
+    public partial class SolotravellerMasterDetailPageDetail : ContentPage
     {
-        public SoloMasterDetailDetail()
+        public SolotravellerMasterDetailPageDetail()
         {
             InitializeComponent();
         }

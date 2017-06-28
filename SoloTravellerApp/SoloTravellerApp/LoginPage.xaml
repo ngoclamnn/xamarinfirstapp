@@ -4,8 +4,8 @@
              x:Class="SoloTravellerApp.LoginPage">
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-            <Button Text="Continue with Facebook"></Button>
-            <Button Clicked="OnLoginClicked" Text="Continue with Google"></Button>
+            <Button Clicked="OnLoginClicked" Text="Continue with Facebook"></Button>
+            <Button Text="Continue with Google"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

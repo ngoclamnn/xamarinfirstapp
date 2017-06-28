@@ -40,34 +40,38 @@
     </Compile>
     <Compile Include="AuthenticationState.cs" />
     <Compile Include="Constants.cs" />
-    <Compile Include="MasterPageItem.cs" />
-    <Compile Include="SoloMasterDetail.xaml.cs">
-      <DependentUpon>SoloMasterDetail.xaml</DependentUpon>
+    <Compile Include="ContactsPage.xaml.cs">
+      <DependentUpon>ContactsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SoloMasterDetailDetail.xaml.cs">
-      <DependentUpon>SoloMasterDetailDetail.xaml</DependentUpon>
+    <Compile Include="LogoutPage.xaml.cs">
+      <DependentUpon>LogoutPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SoloMasterDetailMaster.xaml.cs">
-      <DependentUpon>SoloMasterDetailMaster.xaml</DependentUpon>
+    <Compile Include="MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SoloMasterDetailMenuItem.cs" />
-    <Compile Include="SoloMasterPage.xaml.cs">
-      <DependentUpon>SoloMasterPage.xaml</DependentUpon>
+    <Compile Include="ReminderPage.xaml.cs">
+      <DependentUpon>ReminderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SolotravellerMasterDetailPage.xaml.cs">
+      <DependentUpon>SolotravellerMasterDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SolotravellerMasterDetailPageDetail.xaml.cs">
+      <DependentUpon>SolotravellerMasterDetailPageDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SolotravellerMasterDetailPageMaster.xaml.cs">
+      <DependentUpon>SolotravellerMasterDetailPageMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SolotravellerMasterDetailPageMenuItem.cs" />
+    <Compile Include="ToDoListPage.xaml.cs">
+      <DependentUpon>ToDoListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -89,6 +93,9 @@
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Forms.Maps, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
     </Reference>
@@ -106,25 +113,49 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SoloMasterDetail.xaml">
+    <EmbeddedResource Include="ContactsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SoloMasterDetailMaster.xaml">
+    <EmbeddedResource Include="ReminderPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SoloMasterDetailDetail.xaml">
+    <EmbeddedResource Include="ToDoListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SoloMasterPage.xaml">
+    <EmbeddedResource Include="SolotravellerMasterDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SolotravellerMasterDetailPageMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SolotravellerMasterDetailPageDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LogoutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MapPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

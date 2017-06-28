@@ -18,9 +18,9 @@ namespace SoloTravellerApp
             Store = AccountStore.Create();
             Account = Store.FindAccountsForService(Constants.AppName).FirstOrDefault();
             if (Account != null)
-                MainPage = new NavigationPage(new MainPage());
+                MainPage = new SolotravellerMasterDetailPage();
             else
-                MainPage = new NavigationPage(new LoginPage());
+                MainPage = new LoginPage();
         }
 
         protected override void OnStart()
